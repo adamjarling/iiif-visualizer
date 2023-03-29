@@ -1,0 +1,259 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif",
+  "type": "Manifest",
+  "label": { "none": ["Dottor Plus Quam Perfectus"] },
+  "summary": {
+    "none": [
+      "The forehead of this mask is \"astronomical.\" The lumps are laid out in the form of a constellation, symbolizing universal thought and consciousness. This Dottore is a classic Bologna-dialect Dottore with multilinguistic layers. He is a great expert on everything and a friend-enemy of Magnifico, with whom he is in eternal conflict-complicity. This mask has a minimal structure: just forehead and nose. The forehead is indispensable as a symbol of genius, the nose as the comic center of the face. Dottore-like in everything, the character is in reality a continuation of the ancient charlatan who demonstrates spectacular but doubtful knowledge that depends on the ignorance of others. The audience immediately recognizes him for what he is, shameless and pompous. But he is truly great in one thing: gastronomy. There he excels. He goes into exaltation, becomes deeply moved, and slobbers over himself while describing the recipe, for instance, of real lasagna. He is scandalized, indignant, and furious when reporting barbarous variations and ignoble practices. The Dottore is the projection of the aspirations of an entire starving population that sees in him, in his immense gut, fat pronunciation, language that explosively reinvents all languages, and intestinal outbursts, the realization of their most gluttonous, prohibited desires."
+    ]
+  },
+  "requiredStatement": {
+    "label": { "none": ["Attribution"] },
+    "value": {
+      "none": [
+        "Courtesy of Northwestern University Libraries",
+        "These images are from material in the collections of the Charles Deering McCormick Library of Special Collections of Northwestern University Libraries, and are provided for use by its students, faculty and staff, and by other researchers visiting this site, for research consultation and scholarly purposes only. Further distribution and/or any commercial use of the images from this site is not permitted."
+      ]
+    }
+  },
+  "rights": "http://rightsstatements.org/vocab/InC/1.0/",
+  "thumbnail": [
+    {
+      "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517/thumbnail",
+      "type": "Image",
+      "format": "image/jpeg",
+      "height": 300,
+      "width": 300
+    }
+  ],
+  "seeAlso": [
+    {
+      "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517",
+      "type": "Dataset",
+      "format": "application/json",
+      "label": {
+        "none": ["Northwestern University Libraries Digital Collections API"]
+      }
+    }
+  ],
+  "homepage": [
+    {
+      "id": "https://dc.library.northwestern.edu/items/f912a581-d9e8-43d6-a7c8-a8d46eff7517",
+      "type": "Text",
+      "format": "text/html",
+      "label": {
+        "none": [
+          "Homepage at Northwestern University Libraries Digital Collections"
+        ]
+      }
+    }
+  ],
+  "partOf": [
+    {
+      "id": "https://api.dc.library.northwestern.edu/api/v2/collections/c373ecd2-2c45-45f2-9f9e-52dc244870bd?as=iiif",
+      "type": "Collection",
+      "label": { "none": ["Commedia dell'Arte: The Masks of Antonio Fava"] },
+      "summary": {
+        "none": [
+          "The Commedia dell'Arte, the famous improvisational theatre style born in Renaissance Italy, remains a major influence in today's theatre. Antonio Fava is an actor, comedian, author, director, musician, mask maker and Internationally renowned Maestro of Commedia dell'Arte.  The masks in this collection are all stored in the Charles Deering McCormick Library of Special Collections. Fava's book The Comic Mask in the Commedia dell'Arte is published by Northwestern University Press."
+        ]
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/0",
+      "type": "Canvas",
+      "height": 4348,
+      "width": 4364,
+      "label": { "none": ["Front"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.dc.library.northwestern.edu/iiif/2/156b56cf-fcc5-457c-86cc-5f806b7c280a/full/!300,300/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "height": 300,
+          "width": 300,
+          "service": [
+            {
+              "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/156b56cf-fcc5-457c-86cc-5f806b7c280a",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level2.json"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/0/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/0",
+              "body": {
+                "id": "https://iiif.dc.library.northwestern.edu/iiif/2/156b56cf-fcc5-457c-86cc-5f806b7c280a/full/600,/0/default.jpg",
+                "type": "Image",
+                "format": "image/tiff",
+                "height": 4348,
+                "width": 4364,
+                "service": [
+                  {
+                    "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/156b56cf-fcc5-457c-86cc-5f806b7c280a",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level2.json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/1",
+      "type": "Canvas",
+      "height": 4628,
+      "width": 5316,
+      "label": { "none": ["Left"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.dc.library.northwestern.edu/iiif/2/f1f663b0-d9b0-49f5-870a-b8bc284ddcbc/full/!300,300/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "height": 300,
+          "width": 300,
+          "service": [
+            {
+              "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/f1f663b0-d9b0-49f5-870a-b8bc284ddcbc",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level2.json"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/1/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/1/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/1",
+              "body": {
+                "id": "https://iiif.dc.library.northwestern.edu/iiif/2/f1f663b0-d9b0-49f5-870a-b8bc284ddcbc/full/600,/0/default.jpg",
+                "type": "Image",
+                "format": "image/tiff",
+                "height": 4628,
+                "width": 5316,
+                "service": [
+                  {
+                    "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/f1f663b0-d9b0-49f5-870a-b8bc284ddcbc",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level2.json"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://api.dc.library.northwestern.edu/api/v2/works/f82bb4bd-fe42-4b55-aa11-809026130c7f?as=iiif/canvas/access/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://api.dc.library.northwestern.edu/api/v2/works/f82bb4bd-fe42-4b55-aa11-809026130c7f?as=iiif/canvas/access/0",
+              "body": {
+                "id": "https://iiif.dc.library.northwestern.edu/iiif/2/3544bee8-edf3-4d64-9ff9-bece8a61dec8/full/600,/0/default.jpg",
+                "type": "Image",
+                "format": "image/tiff",
+                "height": 5792,
+                "width": 8688,
+                "service": [
+                  {
+                    "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/3544bee8-edf3-4d64-9ff9-bece8a61dec8",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level2.json"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://api.dc.library.northwestern.edu/api/v2/works/7a1684b1-ce73-42c2-81ac-26dd593e45e9?as=iiif/canvas/access/0/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://api.dc.library.northwestern.edu/api/v2/works/7a1684b1-ce73-42c2-81ac-26dd593e45e9?as=iiif/canvas/access/0",
+              "body": {
+                "id": "https://iiif.dc.library.northwestern.edu/iiif/2/3a8a6b6b-0a6e-44e9-8ba2-e777b40575aa/full/600,/0/default.jpg",
+                "type": "Image",
+                "format": "image/tiff",
+                "height": 2511,
+                "width": 1793,
+                "service": [
+                  {
+                    "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/3a8a6b6b-0a6e-44e9-8ba2-e777b40575aa",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level2.json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/2",
+      "type": "Canvas",
+      "height": 4672,
+      "width": 5351,
+      "label": { "none": ["Right"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.dc.library.northwestern.edu/iiif/2/f6d22d42-71a0-419d-a57e-8801ed3cf67f/full/!300,300/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "height": 300,
+          "width": 300,
+          "service": [
+            {
+              "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/f6d22d42-71a0-419d-a57e-8801ed3cf67f",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level2.json"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/2/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/2/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif/canvas/access/2",
+              "body": {
+                "id": "https://iiif.dc.library.northwestern.edu/iiif/2/f6d22d42-71a0-419d-a57e-8801ed3cf67f/full/600,/0/default.jpg",
+                "type": "Image",
+                "format": "image/tiff",
+                "height": 4672,
+                "width": 5351,
+                "service": [
+                  {
+                    "@id": "https://iiif.dc.library.northwestern.edu/iiif/2/f6d22d42-71a0-419d-a57e-8801ed3cf67f",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level2.json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
