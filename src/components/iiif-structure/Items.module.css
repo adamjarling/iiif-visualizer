@@ -1,26 +1,32 @@
 .annotationMetadata {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: end;
   font-size: small;
   opacity: 0.5;
   padding: 0.5rem 0 0;
 }
+.annotationMetadata > li {
+  margin-left: 1rem;
+}
+
+.annotationBg {
+  background: rgba(var(--secondary-color1), 0.2);
+}
+
+.annotationPageBg {
+  background: rgba(var(--secondary-color1), 0.1);
+}
+
+.canvasBg {
+  background: rgba(var(--primary-color), 0.2);
+}
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem;
   margin: 1rem;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: #1a1a1a;
-  color: #ffffff;
 }
 
 img {

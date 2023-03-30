@@ -5,7 +5,7 @@ import CanvasComponent from "./Canvas";
 import React from "react";
 import classes from "./Items.module.css";
 
-const { grid } = classes;
+const { annotationBg, annotationPageBg, canvasBg, grid } = classes;
 
 interface ItemsProps {
   items: Canvas[] | AnnotationPage[] | Annotation[];
@@ -19,7 +19,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul>
           {items?.map((item) => (
-            <li className="vizWrapper">
+            <li className={`vizWrapper ${canvasBg}`}>
               <span className="vizLabel">{item.type}</span>
               <CanvasComponent canvas={item as Canvas} />
             </li>
@@ -29,7 +29,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
     case "AnnotationPage":
       let annotationPages = items as AnnotationPage[];
       return (
-        <ul className="vizWrapper">
+        <ul className={`vizWrapper ${annotationPageBg}`}>
           {annotationPages?.map((annotationPage) => (
             <li>
               <span className="vizLabel">{annotationPage.type}</span>
@@ -43,7 +43,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul className={`${grid} `}>
           {annotations?.map((annotation) => (
-            <li className="vizWrapper">
+            <li className={`vizWrapper ${annotationBg}`}>
               <span className="vizLabel">
                 {annotation.type} | <i>motivation="{annotation.motivation}"</i>
               </span>

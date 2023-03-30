@@ -2,9 +2,6 @@ import "./App.css";
 
 import * as manifest from "./__fixtures__/manifest1.json";
 
-import { Canvas, Collection, Manifest } from "@iiif/presentation-3";
-
-import CanvasList from "./components/CanvasList";
 import Items from "./components/iiif-structure/Items";
 import { fetch } from "@iiif/vault-helpers/fetch";
 import { useState } from "react";

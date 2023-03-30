@@ -17,13 +17,14 @@ const Annotation: React.FC<AnnotationProps> = ({ annotation }) => {
   if (!id || !type) return null;
 
   if (type === "Image") {
+    const serviceType = service?.[0]?.type || service?.[0]?.["@type"];
     return (
-      <li className={classes.card}>
+      <li className={``}>
         <img src={id} alt={`IIIF annotation painting on canvas`} />
         <ul className={classes.annotationMetadata}>
           <li>{format}</li>
           <li>{`${width} x ${height}`}</li>
-          {service && <li>{service[0].type}</li>}
+          {serviceType && <li>{serviceType}</li>}
         </ul>
       </li>
     );
