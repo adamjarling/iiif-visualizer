@@ -19,7 +19,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul>
           {items?.map((item) => (
-            <li className={`vizWrapper ${canvasBg}`}>
+            <li key={item.id} className={`vizWrapper ${canvasBg}`}>
               <span className="vizLabel">{item.type}</span>
               <CanvasComponent canvas={item as Canvas} />
             </li>
@@ -31,7 +31,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul className={`vizWrapper ${annotationPageBg}`}>
           {annotationPages?.map((annotationPage) => (
-            <li>
+            <li key={annotationPage.id}>
               <span className="vizLabel">{annotationPage.type}</span>
               {annotationPage.items && <Items items={annotationPage.items} />}
             </li>
@@ -43,7 +43,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul className={`${grid} `}>
           {annotations?.map((annotation) => (
-            <li className={`vizWrapper ${annotationBg}`}>
+            <li key={annotation.id} className={`vizWrapper ${annotationBg}`}>
               <span className="vizLabel">
                 {annotation.type} | <i>motivation="{annotation.motivation}"</i>
               </span>

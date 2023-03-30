@@ -3,6 +3,36 @@
   "id": "https://api.dc.library.northwestern.edu/api/v2/works/f912a581-d9e8-43d6-a7c8-a8d46eff7517?as=iiif",
   "type": "Manifest",
   "label": { "none": ["Dottor Plus Quam Perfectus"] },
+  "metadata": [
+    {
+      "label": {
+        "none": ["Alternate Title"]
+      },
+      "value": {
+        "none": ["Buy war bonds"]
+      }
+    },
+    {
+      "label": {
+        "none": ["Contributor"]
+      },
+      "value": {
+        "none": [
+          "United States. Office of War Information (Contributor)",
+          "United States. Office of War Information. Bureau of Public Inquiries (Distributor)",
+          "Rockwell, Norman, 1894-1978 (Illustrator)"
+        ]
+      }
+    },
+    {
+      "label": {
+        "none": ["Date"]
+      },
+      "value": {
+        "none": ["1943"]
+      }
+    }
+  ],
   "summary": {
     "none": [
       "The forehead of this mask is \"astronomical.\" The lumps are laid out in the form of a constellation, symbolizing universal thought and consciousness. This Dottore is a classic Bologna-dialect Dottore with multilinguistic layers. He is a great expert on everything and a friend-enemy of Magnifico, with whom he is in eternal conflict-complicity. This mask has a minimal structure: just forehead and nose. The forehead is indispensable as a symbol of genius, the nose as the comic center of the face. Dottore-like in everything, the character is in reality a continuation of the ancient charlatan who demonstrates spectacular but doubtful knowledge that depends on the ignorance of others. The audience immediately recognizes him for what he is, shameless and pompous. But he is truly great in one thing: gastronomy. There he excels. He goes into exaltation, becomes deeply moved, and slobbers over himself while describing the recipe, for instance, of real lasagna. He is scandalized, indignant, and furious when reporting barbarous variations and ignoble practices. The Dottore is the projection of the aspirations of an entire starving population that sees in him, in his immense gut, fat pronunciation, language that explosively reinvents all languages, and intestinal outbursts, the realization of their most gluttonous, prohibited desires."

@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+dl {
+  font-size: 0.9rem;
+}
+dl dt {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
 form[name="iiif-resource"] {
   display: inline-grid;
   grid-template-columns: 500px 100px;
@@ -12,9 +20,13 @@ form[name="iiif-resource"] {
   padding: 1rem 0;
 }
 
+.resourceWrapper {
+  font-family: monospace;
+}
+
 .vizLabel {
   font-size: small;
-  display: inline-block;
+  display: block;
   opacity: 0.5;
   padding-bottom: 1rem;
 }
@@ -22,8 +34,8 @@ form[name="iiif-resource"] {
 .vizWrapper {
   border: 1px dashed rgba(228, 224, 238, 0.5);
   background: rgba(var(--primary-color), 0.1);
-  color: #ffffff;
   position: relative;
   text-align: left;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
