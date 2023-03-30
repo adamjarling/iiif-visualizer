@@ -1,16 +1,23 @@
 import "./App.css";
 
-import * as manifest from "./__fixtures__/manifest1.json";
+import { useEffect, useState } from "react";
 
 import IIIFStructureMetadata from "./components/iiif-structure/Metadata";
 import IIIFStructureSummary from "./components/iiif-structure/Summary";
 import IIIFStructureThumbnail from "./components/iiif-structure/Thumbnail";
 import Items from "./components/iiif-structure/Items";
 import { fetch } from "@iiif/vault-helpers/fetch";
-import { useState } from "react";
 
 function App() {
-  const [resource, setResource] = useState<any>(manifest);
+  const [resource, setResource] = useState<any>(null);
+
+  useEffect(() => {
+    // fetch the manifest
+    fetch("__fixtures__/manifest1.json").then((data) => {
+      // set the resource state
+      setResource(data);
+    });
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,12 +48,11 @@ function App() {
       </form>
 
       {resource && (
-        <div className="resourceWrapper">
+        <>
           <section>
             <pre className="code">{JSON.stringify(resource, null, 2)}</pre>
           </section>
-
-          <section>
+          <section className="resourceWrapper">
             <div className={`vizWrapper`}>
               <span className="vizLabel">{resource.type}</span>
               <IIIFStructureMetadata resource={resource} />
@@ -55,7 +61,7 @@ function App() {
               <Items items={resource.items} />
             </div>
           </section>
-        </div>
+        </>
       )}
     </div>
   );
