@@ -2,7 +2,10 @@ import "./App.css";
 
 import * as manifest from "./__fixtures__/manifest1.json";
 
+import { Canvas, Collection, Manifest } from "@iiif/presentation-3";
+
 import CanvasList from "./components/CanvasList";
+import Items from "./components/iiif-structure/Items";
 import { fetch } from "@iiif/vault-helpers/fetch";
 import { useState } from "react";
 
@@ -40,7 +43,11 @@ function App() {
       {resource && (
         <div>
           <pre className="code">{JSON.stringify(resource, null, 2)}</pre>
-          <CanvasList items={resource.items} />
+          <div className={`vizWrapper`}>
+            <span className="vizLabel">{resource.type}</span>
+            {/* <CanvasList items={resource.items} /> */}
+            <Items items={resource.items} />
+          </div>
         </div>
       )}
     </div>

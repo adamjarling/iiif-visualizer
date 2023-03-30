@@ -11,3 +11,19 @@ form[name="iiif-resource"] {
   column-gap: 1rem;
   padding: 1rem 0;
 }
+
+.vizLabel {
+  font-size: small;
+  display: inline-block;
+  opacity: 0.5;
+  padding-bottom: 1rem;
+}
+
+.vizWrapper {
+  border: 1px dashed rgba(228, 224, 238, 0.5);
+  background: rgba(var(--primary-color), 0.1);
+  color: #ffffff;
+  position: relative;
+  text-align: left;
+  padding: 1rem;
+}

@@ -1,9 +1,11 @@
-.canvas-list {
+.canvasWrapper {
+  background: rgba(var(--primary-color), 0.2);
+}
+
+.list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
-  border-radius: 5px;
-  color: #ffffff;
+
   text-align: left;
 }

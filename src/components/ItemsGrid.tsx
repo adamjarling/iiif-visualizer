@@ -8,7 +8,7 @@ import {
 import React from "react";
 import classes from "./itemsGrid.module.css";
 
-const { card, grid } = classes;
+const { annotationsWrapper, card, grid } = classes;
 
 interface ItemsGridProps {
   annotationPages?: AnnotationPage[];
@@ -20,32 +20,38 @@ const ItemsGrid: React.FC<ItemsGridProps> = ({ annotationPages = [] }) => {
   if (annotationPages.length === 0) return null;
 
   return (
-    <ul className={grid}>
+    <ul className={`vizWrapper ${annotationsWrapper}`}>
       {annotationPages.map((annotationPage) => {
-        const { items } = annotationPage;
-        if (!items) return null;
+        return (
+          <li>
+            <span className="vizLabel">{annotationPage.type}</span>
+            {annotationPage.items?.length > 0 && <div></div>}
+          </li>
+        );
+        //   const { items } = annotationPage;
+        //   if (!items) return null;
 
-        return items.map((item) => {
-          const { body } = item;
-          if (!body) return null;
+        //   return items.map((item) => {
+        //     const { body } = item;
+        //     if (!body) return null;
 
-          const { id, type } = body as Body;
-          if (!id || !type) return null;
+        //     const { id, type } = body as Body;
+        //     if (!id || !type) return null;
 
-          if (type === "Image") {
-            return (
-              <li className={card}>
-                <img src={id} />
-              </li>
-            );
-          }
+        //     if (type === "Image") {
+        //       return (
+        //         <li className={card}>
+        //           <img src={id} />
+        //         </li>
+        //       );
+        //     }
 
-          if (type === "Video") {
-            return <video src={id} />;
-          }
+        //     if (type === "Video") {
+        //       return <video src={id} />;
+        //     }
 
-          return null;
-        });
+        //     return null;
+        //   });
       })}
     </ul>
   );

@@ -1,0 +1,60 @@
+import { Annotation, AnnotationPage, Canvas } from "@iiif/presentation-3";
+
+import AnnotationComponent from "./Annotation";
+import CanvasComponent from "./Canvas";
+import React from "react";
+import classes from "./Items.module.css";
+
+const { grid } = classes;
+
+interface ItemsProps {
+  items: Canvas[] | AnnotationPage[] | Annotation[];
+}
+
+const Items: React.FC<ItemsProps> = ({ items }) => {
+  if (items.length === 0) return null;
+
+  switch (items[0].type) {
+    case "Canvas":
+      return (
+        <ul>
+          {items?.map((item) => (
+            <li className="vizWrapper">
+              <span className="vizLabel">{item.type}</span>
+              <CanvasComponent canvas={item as Canvas} />
+            </li>
+          ))}
+        </ul>
+      );
+    case "AnnotationPage":
+      let annotationPages = items as AnnotationPage[];
+      return (
+        <ul className="vizWrapper">
+          {annotationPages?.map((annotationPage) => (
+            <li>
+              <span className="vizLabel">{annotationPage.type}</span>
+              {annotationPage.items && <Items items={annotationPage.items} />}
+            </li>
+          ))}
+        </ul>
+      );
+    case "Annotation":
+      const annotations = items as Annotation[];
+      return (
+        <ul className={`${grid} `}>
+          {annotations?.map((annotation) => (
+            <li className="vizWrapper">
+              <span className="vizLabel">
+                {annotation.type} | <i>motivation="{annotation.motivation}"</i>
+              </span>
+              <AnnotationComponent annotation={annotation} />
+            </li>
+          ))}
+        </ul>
+      );
+    default:
+      return <></>;
+  }
+};
+
+export default Items;
