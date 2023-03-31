@@ -9,10 +9,10 @@ import IIIFStructureSeeAlso from "./components/iiif-structure/linking/SeeAlso";
 import IIIFStructureSummary from "./components/iiif-structure/descriptive/Summary";
 import IIIFStructureThumbnail from "./components/iiif-structure/descriptive/Thumbnail";
 import Items from "./components/iiif-structure/Items";
-import ManifestSummary from "./components/ManifestSummary";
+import JSONViewer from "./components/JSONViewer";
+import ManifestLegend from "./components/ManifestLegend";
 import ResourceSelector from "./components/ResourceSelector";
 import { fetch } from "@iiif/vault-helpers/fetch";
-import palenight from "prism-react-renderer/themes/palenight";
 
 function App() {
   const [resource, setResource] = useState<any>(null);
@@ -38,27 +38,7 @@ function App() {
         <>
           <section>
             <h2>JSON</h2>
-            <Highlight
-              {...defaultProps}
-              code={JSON.stringify(resource, null, 2)}
-              language="javascript"
-              theme={palenight}
-            >
-              {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre
-                  className={className}
-                  style={{ ...style, background: "var(--black)" }}
-                >
-                  {tokens.map((line, i) => (
-                    <div {...getLineProps({ line, key: i })}>
-                      {line.map((token, key) => (
-                        <span {...getTokenProps({ token, key })} />
-                      ))}
-                    </div>
-                  ))}
-                </pre>
-              )}
-            </Highlight>
+            <JSONViewer resource={resource} />
           </section>
 
           <section>
@@ -66,10 +46,10 @@ function App() {
               <img src="/iiif-logo.png" alt="IIIF Logo" />
               Manifest
             </h2>
-            <ManifestSummary resource={resource} />
           </section>
 
           <section className="resourceWrapper">
+            <ManifestLegend resource={resource} />
             <div className={`vizWrapper`}>
               <span className="vizLabel">{resource.type}</span>
               <IIIFStructureMetadata resource={resource} />

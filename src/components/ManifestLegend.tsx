@@ -1,6 +1,6 @@
 import { Manifest } from "@iiif/presentation-3";
 import React from "react";
-import classes from "./ManifestSummary.module.css";
+import classes from "./ManifestLegend.module.css";
 
 const { legend, wrapper } = classes;
 
@@ -23,7 +23,7 @@ const legendItems = [
   },
 ];
 
-const ManifestSummary: React.FC<ManifestSummaryProps> = ({ resource }) => {
+const ManifestLegend: React.FC<ManifestSummaryProps> = ({ resource }) => {
   return (
     <div className={wrapper}>
       <ul className={legend}>
@@ -42,4 +42,4 @@ const ManifestSummary: React.FC<ManifestSummaryProps> = ({ resource }) => {
   );
 };
 
-export default ManifestSummary;
+export default ManifestLegend;
