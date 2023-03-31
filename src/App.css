@@ -48,4 +48,5 @@ section {
   text-align: left;
   padding: 1rem;
   margin-bottom: 1rem;
+  box-shadow: 4px 4px 10px #1a1a1a;
 }

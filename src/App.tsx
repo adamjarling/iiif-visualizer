@@ -1,7 +1,5 @@
 import "./App.css";
 
-import { useEffect, useState } from "react";
-
 import IIIFStructureHomepage from "./components/iiif-structure/linking/Homepage";
 import IIIFStructureMetadata from "./components/iiif-structure/descriptive/Metadata";
 import IIIFStructureSeeAlso from "./components/iiif-structure/linking/SeeAlso";
@@ -13,6 +11,7 @@ import ManifestLegend from "./components/ManifestLegend";
 import ResourceSelector from "./components/ResourceSelector";
 import Structures from "./components/iiif-structure/Structures";
 import { fetch } from "@iiif/vault-helpers/fetch";
+import { useState } from "react";
 
 function App() {
   const [resource, setResource] = useState<any>(null);
@@ -44,7 +43,7 @@ function App() {
           <section>
             <h2 className="iconHeadline">
               <img src="/iiif-logo.png" alt="IIIF Logo" />
-              Manifest
+              {resource.type}
             </h2>
           </section>
 
