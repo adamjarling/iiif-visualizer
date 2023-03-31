@@ -18,9 +18,11 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
     case "Canvas":
       return (
         <ul>
-          {items?.map((item) => (
+          {items?.map((item, i) => (
             <li key={item.id} className={`vizWrapper ${canvasBg}`}>
-              <span className="vizLabel">{item.type}</span>
+              <span className="vizLabel">
+                {item.type} ({`${i + 1} of ${items.length}`})
+              </span>
               <CanvasComponent canvas={item as Canvas} />
             </li>
           ))}

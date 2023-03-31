@@ -1,0 +1,32 @@
+.wrapper {
+  /* border: 1px solid rgba(228, 224, 238, 0.5); */
+}
+
+.legend {
+  display: flex;
+  font-size: small;
+}
+.legend span:first-of-type {
+  height: 1rem;
+  width: 1rem;
+  display: block;
+  margin-right: 0.5rem;
+}
+
+.legend span[data-descriptive] {
+  background: rgba(var(--secondary-color2), 0.2);
+}
+
+.legend span[data-structural] {
+  background: rgba(var(--secondary-color1), 0.3);
+}
+
+.legend span[data-linking] {
+  background: rgba(var(--secondary-color3), 0.3);
+}
+
+.legend > li {
+  display: flex;
+  place-items: center;
+  margin-right: 1rem;
+}

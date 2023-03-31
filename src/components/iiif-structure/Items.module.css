@@ -11,7 +11,7 @@
 }
 
 .annotationBg {
-  background: rgba(var(--secondary-color1), 0.2);
+  background: rgba(var(--secondary-color1), 0.1);
 }
 
 .annotationPageBg {
@@ -19,7 +19,7 @@
 }
 
 .canvasBg {
-  background: rgba(var(--primary-color), 0.2);
+  background: rgba(var(--secondary-color1), 0.1);
 }
 
 .grid {
