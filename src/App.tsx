@@ -1,6 +1,5 @@
 import "./App.css";
 
-import Highlight, { defaultProps } from "prism-react-renderer";
 import { useEffect, useState } from "react";
 
 import IIIFStructureHomepage from "./components/iiif-structure/linking/Homepage";
@@ -12,6 +11,7 @@ import Items from "./components/iiif-structure/Items";
 import JSONViewer from "./components/JSONViewer";
 import ManifestLegend from "./components/ManifestLegend";
 import ResourceSelector from "./components/ResourceSelector";
+import Structures from "./components/iiif-structure/Structures";
 import { fetch } from "@iiif/vault-helpers/fetch";
 
 function App() {
@@ -58,6 +58,7 @@ function App() {
               <IIIFStructureHomepage resource={resource} />
               <IIIFStructureSeeAlso resource={resource} />
               <Items items={resource.items} />
+              <Structures structures={resource.structures} />
             </div>
           </section>
         </>

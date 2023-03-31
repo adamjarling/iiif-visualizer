@@ -8,7 +8,7 @@ import classes from "./Items.module.css";
 const { annotationBg, annotationPageBg, canvasBg, grid } = classes;
 
 interface ItemsProps {
-  items: Canvas[] | AnnotationPage[] | Annotation[];
+  items: Canvas[] | AnnotationPage[] | Annotation[] | any[];
 }
 
 const Items: React.FC<ItemsProps> = ({ items }) => {
@@ -50,6 +50,20 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
                 {annotation.type} | <i>motivation="{annotation.motivation}"</i>
               </span>
               <AnnotationComponent annotation={annotation} />
+            </li>
+          ))}
+        </ul>
+      );
+
+    case "Range":
+      return (
+        <ul>
+          {items?.map((item, i) => (
+            <li key={item.id} className={`vizWrapper ${canvasBg}`}>
+              <span className="vizLabel">
+                {item.type} ({`${i + 1} of ${items.length}`})
+              </span>
+              <CanvasComponent canvas={item as Canvas} />
             </li>
           ))}
         </ul>
