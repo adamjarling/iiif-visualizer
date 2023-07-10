@@ -22,9 +22,17 @@ const Annotation: React.FC<AnnotationProps> = ({ annotation }) => {
       <>
         <img src={id} alt={`IIIF annotation painting on canvas`} />
         <ul className={classes.annotationMetadata}>
-          <li>{format}</li>
-          <li>{`${width} x ${height}`}</li>
-          {serviceType && <li>{serviceType}</li>}
+          <li>
+            <small>{format}</small>
+          </li>
+          <li>
+            <small>{`${width} x ${height}`}</small>
+          </li>
+          {serviceType && (
+            <li>
+              <small>{serviceType}</small>
+            </li>
+          )}
         </ul>
       </>
     );

@@ -35,7 +35,10 @@ function App() {
       {resource && (
         <>
           <section className="container">
-            <h2>JSON</h2>
+            <hgroup>
+              <h2>JSON</h2>
+              <h3>* converted to Presentation v3</h3>
+            </hgroup>
             <JSONViewer resource={resource} />
           </section>
 

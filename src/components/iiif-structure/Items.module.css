@@ -1,13 +1,7 @@
 .annotationMetadata {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  font-size: small;
-  opacity: 0.5;
-  padding: 0.5rem 0 0;
 }
 .annotationMetadata > li {
-  margin-left: 1rem;
+  text-align: right;
 }
 
 .annotationBg {
@@ -22,12 +16,12 @@
   background: rgba(var(--secondary-color1), 0.1);
 }
 
-.grid {
+/* .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem;
   margin: 1rem;
-}
+} */
 
 img {
   max-width: 100%;

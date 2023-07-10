@@ -47,13 +47,12 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
     case "Annotation":
       const annotations = items as Annotation[];
       return (
-        <ul className={`${grid} `}>
+        <ul className={`grid`}>
           {annotations?.map((annotation) => (
             <li key={annotation.id} className={`vizWrapper ${annotationBg}`}>
               <p>
                 <mark className="vizLabel">
-                  {annotation.type} |{" "}
-                  <i>motivation="{annotation.motivation}"</i>
+                  {annotation.type} <i>motivation="{annotation.motivation}"</i>
                 </mark>
               </p>
               <AnnotationComponent annotation={annotation} />
