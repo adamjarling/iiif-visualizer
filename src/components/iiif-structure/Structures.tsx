@@ -13,7 +13,9 @@ const Structures: React.FC<StructuresProps> = ({ structures }) => {
     <ul>
       {structures?.map((structure) => (
         <li key={structure.id} className="vizWrapper">
-          <span className="vizLabel">{structure.type}</span>
+          <p>
+            <mark className="vizLabel">{structure.type}</mark>
+          </p>
           <Label label={structure.label} as="h3" />
           {structure?.items && structure?.items?.length > 0 && (
             <Items items={structure.items} />

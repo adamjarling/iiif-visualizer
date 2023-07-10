@@ -18,7 +18,9 @@ const IIIFStructureMetadata: React.FC<IIIFStructureMetadataProps> = ({
         background: "rgba(var(--secondary-color2), 0.1)",
       }}
     >
-      <span className="vizLabel">Metadata</span>
+      <p>
+        <mark className="vizLabel">Metadata</mark>
+      </p>
       <Metadata metadata={resource.metadata} />
     </div>
   );

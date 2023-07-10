@@ -18,7 +18,9 @@ const IIIFStructureHomepage: React.FC<IIIFStructureHomepageProps> = ({
         background: "rgba(var(--secondary-color3), 0.2)",
       }}
     >
-      <span className="vizLabel">Homepage</span>
+      <p>
+        <mark className="vizLabel">Homepage</mark>
+      </p>
       <Homepage homepage={resource.homepage} />
     </div>
   );

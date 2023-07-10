@@ -20,9 +20,11 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
         <ul>
           {items?.map((item, i) => (
             <li key={item.id} className={`vizWrapper ${canvasBg}`}>
-              <span className="vizLabel">
-                {item.type} ({`${i + 1} of ${items.length}`})
-              </span>
+              <p>
+                <mark className="vizLabel">
+                  {item.type} ({`${i + 1} of ${items.length}`})
+                </mark>
+              </p>
               <CanvasComponent canvas={item as Canvas} />
             </li>
           ))}
@@ -34,7 +36,9 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
         <ul className={`vizWrapper ${annotationPageBg}`}>
           {annotationPages?.map((annotationPage) => (
             <li key={annotationPage.id}>
-              <span className="vizLabel">{annotationPage.type}</span>
+              <p>
+                <mark className="vizLabel">{annotationPage.type}</mark>
+              </p>
               {annotationPage.items && <Items items={annotationPage.items} />}
             </li>
           ))}
@@ -46,9 +50,12 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
         <ul className={`${grid} `}>
           {annotations?.map((annotation) => (
             <li key={annotation.id} className={`vizWrapper ${annotationBg}`}>
-              <span className="vizLabel">
-                {annotation.type} | <i>motivation="{annotation.motivation}"</i>
-              </span>
+              <p>
+                <mark className="vizLabel">
+                  {annotation.type} |{" "}
+                  <i>motivation="{annotation.motivation}"</i>
+                </mark>
+              </p>
               <AnnotationComponent annotation={annotation} />
             </li>
           ))}
@@ -60,9 +67,11 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
         <ul>
           {items?.map((item, i) => (
             <li key={item.id} className={`vizWrapper ${canvasBg}`}>
-              <span className="vizLabel">
-                {item.type} ({`${i + 1} of ${items.length}`})
-              </span>
+              <p>
+                <mark className="vizLabel">
+                  {item.type} ({`${i + 1} of ${items.length}`})
+                </mark>
+              </p>
               <CanvasComponent canvas={item as Canvas} />
             </li>
           ))}

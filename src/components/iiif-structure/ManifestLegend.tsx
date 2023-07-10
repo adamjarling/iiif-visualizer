@@ -34,7 +34,7 @@ const ManifestLegend: React.FC<ManifestSummaryProps> = ({ resource }) => {
                 [`data-${data}`]: data,
               }}
             />
-            <span>{label}</span>
+            <small>{label}</small>
           </li>
         ))}
       </ul>

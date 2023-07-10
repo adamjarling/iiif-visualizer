@@ -18,7 +18,9 @@ const IIIFStructureSummary: React.FC<IIIFStructureSummaryProps> = ({
         background: "rgba(var(--secondary-color2), 0.1)",
       }}
     >
-      <span className="vizLabel">Summary</span>
+      <p>
+        <mark className="vizLabel">Summary</mark>
+      </p>
       <Summary summary={resource.summary} as="p" />
     </div>
   );

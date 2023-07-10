@@ -18,7 +18,9 @@ const IIIFStructureSeeAlso: React.FC<IIIFStructureSeeAlsoProps> = ({
         background: "rgba(var(--secondary-color3), 0.2)",
       }}
     >
-      <span className="vizLabel">SeeAlso</span>
+      <p>
+        <mark className="vizLabel">SeeAlso</mark>
+      </p>
       <SeeAlso seeAlso={resource.seeAlso} />
     </div>
   );

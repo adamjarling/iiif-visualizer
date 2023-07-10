@@ -4,7 +4,6 @@
 
 .legend {
   display: flex;
-  font-size: small;
 }
 .legend span:first-of-type {
   height: 1rem;

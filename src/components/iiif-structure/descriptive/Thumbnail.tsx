@@ -18,7 +18,9 @@ const IIIFStructureThumbnail: React.FC<IIIFStructureThumbnailProps> = ({
         background: "rgba(var(--secondary-color2), 0.1)",
       }}
     >
-      <span className="vizLabel">Thumbnail</span>
+      <p>
+        <mark className="vizLabel">Thumbnail</mark>
+      </p>
       <Thumbnail thumbnail={resource.thumbnail} />
     </div>
   );

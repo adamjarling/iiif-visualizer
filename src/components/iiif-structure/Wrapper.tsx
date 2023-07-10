@@ -35,7 +35,9 @@ const IIIFStructureWrapper: React.FC<Props> = ({ resource }) => {
         <>
           <ManifestLegend resource={resource} />
           <div className={`vizWrapper`}>
-            <span className="vizLabel">{resource.type}</span>
+            <p>
+              <mark className="vizLabel">{resource.type}</mark>
+            </p>
             <IIIFStructureMetadata resource={resource} />
             <IIIFStructureSummary resource={resource} />
             <IIIFStructureThumbnail resource={resource} />

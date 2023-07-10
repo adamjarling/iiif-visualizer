@@ -62,6 +62,7 @@ const ResourceSelector: React.FC<ResourceSelectorProps> = ({
             <button
               onClick={() => handleResourceClick(resource.url)}
               className="outline"
+              data-tooltip={resource.url}
             >
               {resource.label}
             </button>
