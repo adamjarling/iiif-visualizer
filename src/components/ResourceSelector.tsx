@@ -44,7 +44,7 @@ const ResourceSelector: React.FC<ResourceSelectorProps> = ({
 
   return (
     <div className={classes.wrapper}>
-      <form name="iiif-resource" onSubmit={handleSubmit}>
+      <form name="iiif-resource" onSubmit={handleSubmit} className="container">
         <input
           ref={inputRef}
           type="text"
@@ -56,10 +56,13 @@ const ResourceSelector: React.FC<ResourceSelectorProps> = ({
         </button>
       </form>
 
-      <ul className={classes.resourceList}>
+      <ul className={`${classes.resourceList} container-fluid`}>
         {resources.map((resource) => (
           <li key={resource.url}>
-            <button onClick={() => handleResourceClick(resource.url)}>
+            <button
+              onClick={() => handleResourceClick(resource.url)}
+              className="outline"
+            >
               {resource.label}
             </button>
           </li>

@@ -5,9 +5,11 @@ import IIIFStructureMetadata from "./components/iiif-structure/descriptive/Metad
 import IIIFStructureSeeAlso from "./components/iiif-structure/linking/SeeAlso";
 import IIIFStructureSummary from "./components/iiif-structure/descriptive/Summary";
 import IIIFStructureThumbnail from "./components/iiif-structure/descriptive/Thumbnail";
+import IIIFStructureWrapper from "./components/iiif-structure/Wrapper";
 import Items from "./components/iiif-structure/Items";
 import JSONViewer from "./components/JSONViewer";
-import ManifestLegend from "./components/ManifestLegend";
+import ManifestLegend from "./components/iiif-structure/ManifestLegend";
+import Nav from "./components/Nav";
 import ResourceSelector from "./components/ResourceSelector";
 import Structures from "./components/iiif-structure/Structures";
 import { fetch } from "@iiif/vault-helpers/fetch";
@@ -31,34 +33,18 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <ResourceSelector handleSubmit={handleSubmit} />
 
       {resource && (
         <>
-          <section>
+          <section className="container">
             <h2>JSON</h2>
             <JSONViewer resource={resource} />
           </section>
 
-          <section>
-            <h2 className="iconHeadline">
-              <img src="/iiif-logo.png" alt="IIIF Logo" />
-              {resource.type}
-            </h2>
-          </section>
-
-          <section className="resourceWrapper">
-            <ManifestLegend resource={resource} />
-            <div className={`vizWrapper`}>
-              <span className="vizLabel">{resource.type}</span>
-              <IIIFStructureMetadata resource={resource} />
-              <IIIFStructureSummary resource={resource} />
-              <IIIFStructureThumbnail resource={resource} />
-              <IIIFStructureHomepage resource={resource} />
-              <IIIFStructureSeeAlso resource={resource} />
-              <Items items={resource.items} />
-              <Structures structures={resource.structures} />
-            </div>
+          <section className="container">
+            <IIIFStructureWrapper resource={resource} />
           </section>
         </>
       )}

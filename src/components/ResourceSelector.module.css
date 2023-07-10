@@ -1,15 +1,29 @@
+form[name="iiif-resource"] {
+  display: flex;
+  width: 100%;
+}
+form[name="iiif-resource"] > button {
+  width: 60px;
+  margin-left: 0.75rem;
+}
+
 .wrapper {
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .resourceList {
-  font-size: small;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  /* font-size: small;
+  display: flex;
+  justify-content: center; */
 }
 
 .resourceList > li {
   margin: 0 0.5em;
+  list-style: none;
 }

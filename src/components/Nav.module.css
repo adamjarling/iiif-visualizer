@@ -1,0 +1,9 @@
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+}
+.brand-wrapper > img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.25rem;
+}
