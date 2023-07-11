@@ -13,25 +13,15 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%; */
 
-  --iiif-blue1: #bce8ff;
-  --iiif-blue2: #9bdcff;
-  --iiif-blue3: #79d1ff;
-
   /* Pico CSS variables */
-  --primary: #b6acd1 !important;
-  --primary-hover: #836eaa !important;
-
-  --primary-color: 078, 042, 132;
-  --secondary-color1: 000, 127, 164;
-  --secondary-color2: 202, 124, 027;
-  --secondary-color3: 217, 200, 038;
-  --black: #1a1a1a;
+  --primary: #15aeff !important;
+  --primary-hover: #58c5ff !important;
 
   /* IIIF Generated Color palatte */
-  --iiif-descriptive: #002e46;
+  --iiif-descriptive: #182229;
   --iiif-technical: ;
-  --iiif-linking: #142d32;
-  --iiif-structural: #190203;
+  --iiif-linking: #222e37;
+  --iiif-structural: #2c3942;
 }
 
 /* Pico CSS overrides */

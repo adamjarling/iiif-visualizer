@@ -10,19 +10,28 @@ interface StructuresProps {
 
 const Structures: React.FC<StructuresProps> = ({ structures }) => {
   return (
-    <ul>
-      {structures?.map((structure) => (
-        <li key={structure.id} className="vizWrapper">
-          <p>
-            <mark className="vizLabel">{structure.type}</mark>
-          </p>
-          <Label label={structure.label} as="h3" />
-          {structure?.items && structure?.items?.length > 0 && (
-            <Items items={structure.items} />
-          )}
-        </li>
-      ))}
-    </ul>
+    <>
+      <details open>
+        <summary>Structures</summary>
+        <ul className="vizWrapperPadded">
+          {structures?.map((structure) => (
+            <li key={structure.id} className="">
+              <details open>
+                <summary>
+                  {structure.type} [<small>{structure.id}]</small>
+                </summary>
+                <div className="vizWrapperPadded">
+                  <Label label={structure.label} as="h3" />
+                  {structure?.items && structure?.items?.length > 0 && (
+                    <Items items={structure.items} />
+                  )}
+                </div>
+              </details>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </>
   );
 };
 

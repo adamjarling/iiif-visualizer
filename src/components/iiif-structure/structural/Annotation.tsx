@@ -20,7 +20,11 @@ const Annotation: React.FC<AnnotationProps> = ({ annotation }) => {
     const serviceType = service?.[0]?.type || service?.[0]?.["@type"];
     return (
       <details open>
-        <summary>Annotation</summary>
+        <summary>
+          <span data-tooltip={id} data-placement="right">
+            Annotation
+          </span>
+        </summary>
         <div className="">
           <img src={id} alt={`IIIF annotation painting on canvas`} />
           <dl>

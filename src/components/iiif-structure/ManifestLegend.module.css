@@ -1,13 +1,13 @@
 .wrapper {
-  padding: 2rem 0 0rem 0.5rem;
+  padding: 0rem 0 0rem 0.5rem;
 }
 
 .legend {
   display: flex;
 }
 .legend span:first-of-type {
-  height: 1rem;
-  width: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
   display: block;
   margin-right: 0.5rem;
 }

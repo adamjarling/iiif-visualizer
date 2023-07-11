@@ -12,12 +12,9 @@ const IIIFStructureSeeAlso: React.FC<IIIFStructureSeeAlsoProps> = ({
   if (!resource?.seeAlso) return null;
 
   return (
-    <details>
+    <details open>
       <summary>SeeAlso</summary>
-      <div className={`vizWrapperPadded`}>
-        {/* <p>
-        <mark className="vizLabel">SeeAlso</mark>
-      </p> */}
+      <div className={``}>
         <SeeAlso seeAlso={resource.seeAlso} />
       </div>
     </details>

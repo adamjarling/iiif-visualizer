@@ -19,10 +19,12 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul>
           {items?.map((item, i) => (
-            <li key={item.id} className={""}>
+            <li key={item.id}>
               <details open>
                 <summary>
-                  {item.type} ({`${i + 1} of ${items.length}`})
+                  <span data-tooltip={item.id} data-placement="right">
+                    {item.type} ({`${i + 1} of ${items.length}`})
+                  </span>
                 </summary>
                 <div className="vizWrapperPadded">
                   <CanvasComponent canvas={item as Canvas} />
@@ -39,7 +41,11 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
           {annotationPages?.map((annotationPage) => (
             <li key={annotationPage.id}>
               <details open>
-                <summary>{annotationPage.type}</summary>
+                <summary>
+                  <span data-tooltip={annotationPage.id} data-placement="right">
+                    {annotationPage.type}
+                  </span>
+                </summary>
                 <div className="vizWrapperPadded">
                   {annotationPage.items && (
                     <Items items={annotationPage.items} />
@@ -66,13 +72,16 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul>
           {items?.map((item, i) => (
-            <li key={item.id} className={`vizWrapper ${canvasBg}`}>
-              <p>
-                <mark className="vizLabel">
-                  {item.type} ({`${i + 1} of ${items.length}`})
-                </mark>
-              </p>
-              <CanvasComponent canvas={item as Canvas} />
+            <li key={item.id}>
+              <details open>
+                <summary>
+                  {item.type} ({`${i + 1} of ${items.length}`}){" "}
+                  <small>{item.id}</small>
+                </summary>
+                <div className={`vizWrapperPadded`}>
+                  <CanvasComponent canvas={item as Canvas} />
+                </div>
+              </details>
             </li>
           ))}
         </ul>

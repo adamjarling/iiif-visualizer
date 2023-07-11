@@ -12,9 +12,9 @@ const IIIFStructureThumbnail: React.FC<IIIFStructureThumbnailProps> = ({
   if (!resource?.thumbnail) return null;
 
   return (
-    <details>
+    <details open>
       <summary>Thumbnail</summary>
-      <div className={`vizWrapper`}>
+      <div className={``}>
         <Thumbnail thumbnail={resource.thumbnail} />
       </div>
     </details>

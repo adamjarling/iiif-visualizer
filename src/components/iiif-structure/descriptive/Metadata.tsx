@@ -12,7 +12,7 @@ const IIIFStructureMetadata: React.FC<IIIFStructureMetadataProps> = ({
   if (!resource?.metadata) return null;
 
   return (
-    <details>
+    <details open>
       <summary>Metadata</summary>
       <div className={`vizWrapperPadded`}>
         {/* <p>

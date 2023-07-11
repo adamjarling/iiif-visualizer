@@ -12,9 +12,9 @@ const IIIFStructureHomepage: React.FC<IIIFStructureHomepageProps> = ({
   if (!resource?.homepage) return null;
 
   return (
-    <details>
+    <details open>
       <summary>Homepage</summary>
-      <div className={`vizWrapperPadded`}>
+      <div className={``}>
         <Homepage homepage={resource.homepage} />
       </div>
     </details>
