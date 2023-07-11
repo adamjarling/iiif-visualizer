@@ -12,17 +12,15 @@ const IIIFStructureMetadata: React.FC<IIIFStructureMetadataProps> = ({
   if (!resource?.metadata) return null;
 
   return (
-    <div
-      className={`vizWrapper`}
-      style={{
-        background: "rgba(var(--secondary-color2), 0.1)",
-      }}
-    >
-      <p>
-        <mark className="vizLabel">Metadata</mark>
-      </p>
-      <Metadata metadata={resource.metadata} />
-    </div>
+    <details>
+      <summary>Metadata</summary>
+      <div className={`vizWrapperPadded`}>
+        {/* <p>
+          <mark className="vizLabel">Metadata</mark>
+        </p> */}
+        <Metadata metadata={resource.metadata} />
+      </div>
+    </details>
   );
 };
 

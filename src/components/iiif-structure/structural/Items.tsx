@@ -1,7 +1,7 @@
 import { Annotation, AnnotationPage, Canvas } from "@iiif/presentation-3";
 
-import AnnotationComponent from "./Annotation";
-import CanvasComponent from "./Canvas";
+import AnnotationComponent from "../Annotation";
+import CanvasComponent from "../Canvas";
 import React from "react";
 import classes from "./Items.module.css";
 

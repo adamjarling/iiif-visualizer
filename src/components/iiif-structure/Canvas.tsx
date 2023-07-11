@@ -1,5 +1,5 @@
 import { Canvas as CanvasType } from "@iiif/presentation-3";
-import Items from "./Items";
+import Items from "./structural/Items";
 import { Label } from "@samvera/nectar-iiif";
 import React from "react";
 

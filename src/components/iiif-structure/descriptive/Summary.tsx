@@ -12,17 +12,15 @@ const IIIFStructureSummary: React.FC<IIIFStructureSummaryProps> = ({
   if (!resource?.summary) return null;
 
   return (
-    <div
-      className={`vizWrapper`}
-      style={{
-        background: "rgba(var(--secondary-color2), 0.1)",
-      }}
-    >
-      <p>
+    <details>
+      <summary>Summary</summary>
+      <div className={`vizWrapperPadded`}>
+        {/* <p>
         <mark className="vizLabel">Summary</mark>
-      </p>
-      <Summary summary={resource.summary} as="p" />
-    </div>
+      </p> */}
+        <Summary summary={resource.summary} as="p" />
+      </div>
+    </details>
   );
 };
 

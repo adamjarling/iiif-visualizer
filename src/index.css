@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%; */
 
+  --iiif-blue1: #bce8ff;
+  --iiif-blue2: #9bdcff;
+  --iiif-blue3: #79d1ff;
+
   /* Pico CSS variables */
   --primary: #b6acd1 !important;
   --primary-hover: #836eaa !important;
@@ -22,6 +26,12 @@
   --secondary-color2: 202, 124, 027;
   --secondary-color3: 217, 200, 038;
   --black: #1a1a1a;
+
+  /* IIIF Generated Color palatte */
+  --iiif-descriptive: #002e46;
+  --iiif-technical: ;
+  --iiif-linking: #142d32;
+  --iiif-structural: #2c2101;
 }
 
 /* Pico CSS overrides */

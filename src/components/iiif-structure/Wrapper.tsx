@@ -5,9 +5,10 @@ import IIIFStructureMetadata from "../../components/iiif-structure/descriptive/M
 import IIIFStructureSeeAlso from "../../components/iiif-structure/linking/SeeAlso";
 import IIIFStructureSummary from "../../components/iiif-structure/descriptive/Summary";
 import IIIFStructureThumbnail from "../../components/iiif-structure/descriptive/Thumbnail";
-import Items from "../../components/iiif-structure/Items";
+import Items from "./structural/Items";
 import ManifestLegend from "../../components/iiif-structure/ManifestLegend";
 import Structures from "../../components/iiif-structure/Structures";
+import classes from "./Wrapper.module.scss";
 
 interface Props {
   resource: any;
@@ -34,18 +35,29 @@ const IIIFStructureWrapper: React.FC<Props> = ({ resource }) => {
         <summary onClick={handleClick}>{summaryText}</summary>
         <>
           <ManifestLegend resource={resource} />
-          <div className={`vizWrapper`}>
-            <p>
+          <details>
+            <summary>{resource.type}</summary>
+            <div className={`vizWrapper`}>
+              {/* <p>
               <mark className="vizLabel">{resource.type}</mark>
-            </p>
-            <IIIFStructureMetadata resource={resource} />
-            <IIIFStructureSummary resource={resource} />
-            <IIIFStructureThumbnail resource={resource} />
-            <IIIFStructureHomepage resource={resource} />
-            <IIIFStructureSeeAlso resource={resource} />
-            <Items items={resource.items} />
-            <Structures structures={resource.structures} />
-          </div>
+            </p> */}
+              <section className={`${classes.descriptive}`}>
+                <IIIFStructureMetadata resource={resource} />
+                <IIIFStructureSummary resource={resource} />
+                <IIIFStructureThumbnail resource={resource} />
+              </section>
+
+              <section className={classes.linking}>
+                <IIIFStructureHomepage resource={resource} />
+                <IIIFStructureSeeAlso resource={resource} />
+              </section>
+
+              <section className={classes.structural}>
+                <Items items={resource.items} />
+                <Structures structures={resource.structures} />
+              </section>
+            </div>
+          </details>
         </>
       </details>
     </>

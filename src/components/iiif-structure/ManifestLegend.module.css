@@ -12,16 +12,21 @@
   margin-right: 0.5rem;
 }
 
+.legend span {
+  border: 1px solid var(--secondary);
+}
+
 .legend span[data-descriptive] {
-  background: rgba(var(--secondary-color2), 0.2);
+  background: var(--iiif-descriptive);
 }
-
-.legend span[data-structural] {
-  background: rgba(var(--secondary-color1), 0.3);
+.legend span[data-technical] {
+  background: var(--iiif-technical);
 }
-
 .legend span[data-linking] {
-  background: rgba(var(--secondary-color3), 0.3);
+  background: var(--iiif-linking);
+}
+.legend span[data-structural] {
+  background: var(--iiif-structural);
 }
 
 .legend > li {

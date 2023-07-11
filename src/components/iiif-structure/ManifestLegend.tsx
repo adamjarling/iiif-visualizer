@@ -14,12 +14,16 @@ const legendItems = [
     data: "descriptive",
   },
   {
-    label: "Structural",
-    data: "structural",
+    label: "Technical",
+    data: "technical",
   },
   {
     label: "Linking",
     data: "linking",
+  },
+  {
+    label: "Structural",
+    data: "structural",
   },
 ];
 

@@ -12,17 +12,12 @@ const IIIFStructureHomepage: React.FC<IIIFStructureHomepageProps> = ({
   if (!resource?.homepage) return null;
 
   return (
-    <div
-      className={`vizWrapper`}
-      style={{
-        background: "rgba(var(--secondary-color3), 0.2)",
-      }}
-    >
-      <p>
-        <mark className="vizLabel">Homepage</mark>
-      </p>
-      <Homepage homepage={resource.homepage} />
-    </div>
+    <details>
+      <summary>Homepage</summary>
+      <div className={`vizWrapperPadded`}>
+        <Homepage homepage={resource.homepage} />
+      </div>
+    </details>
   );
 };
 

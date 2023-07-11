@@ -12,17 +12,12 @@ const IIIFStructureThumbnail: React.FC<IIIFStructureThumbnailProps> = ({
   if (!resource?.thumbnail) return null;
 
   return (
-    <div
-      className={`vizWrapper`}
-      style={{
-        background: "rgba(var(--secondary-color2), 0.1)",
-      }}
-    >
-      <p>
-        <mark className="vizLabel">Thumbnail</mark>
-      </p>
-      <Thumbnail thumbnail={resource.thumbnail} />
-    </div>
+    <details>
+      <summary>Thumbnail</summary>
+      <div className={`vizWrapper`}>
+        <Thumbnail thumbnail={resource.thumbnail} />
+      </div>
+    </details>
   );
 };
 

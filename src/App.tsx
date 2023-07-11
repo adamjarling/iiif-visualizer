@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 import IIIFStructureWrapper from "./components/iiif-structure/Wrapper";
 import JSONViewer from "./components/JSONViewer";

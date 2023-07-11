@@ -28,14 +28,17 @@ section {
 }
 
 .vizWrapper {
-  border: 1px dashed rgba(228, 224, 238, 0.5);
-  background: rgba(var(--primary-color), 0.1);
+  border: 1px dashed var(--secondary);
+  //background: rgba(var(--primary-color), 0.1);
   position: relative;
   text-align: left;
-  padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 4px 4px 10px #1a1a1a;
   list-style: none;
+}
+.vizWrapperPadded {
+  @extend .vizWrapper;
+  padding: 1rem;
 }
 .vizWrapper li {
   list-style: none;
