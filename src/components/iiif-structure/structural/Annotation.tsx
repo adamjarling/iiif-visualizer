@@ -19,22 +19,29 @@ const Annotation: React.FC<AnnotationProps> = ({ annotation }) => {
   if (type === "Image") {
     const serviceType = service?.[0]?.type || service?.[0]?.["@type"];
     return (
-      <>
-        <img src={id} alt={`IIIF annotation painting on canvas`} />
-        <ul className={classes.annotationMetadata}>
-          <li>
-            <small>{format}</small>
-          </li>
-          <li>
-            <small>{`${width} x ${height}`}</small>
-          </li>
-          {serviceType && (
+      <details open>
+        <summary>Annotation</summary>
+        <div className="">
+          <img src={id} alt={`IIIF annotation painting on canvas`} />
+          <dl>
+            <dt>Motivation</dt>
+            <dd>{annotation.motivation}</dd>
+          </dl>
+          <ul className={classes.annotationMetadata}>
             <li>
-              <small>{serviceType}</small>
+              <small>{format}</small>
             </li>
-          )}
-        </ul>
-      </>
+            <li>
+              <small>{`${width} x ${height}`}</small>
+            </li>
+            {serviceType && (
+              <li>
+                <small>{serviceType}</small>
+              </li>
+            )}
+          </ul>
+        </div>
+      </details>
     );
   }
 

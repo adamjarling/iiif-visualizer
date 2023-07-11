@@ -1,6 +1,6 @@
 import { Annotation, AnnotationPage, Canvas } from "@iiif/presentation-3";
 
-import AnnotationComponent from "../Annotation";
+import AnnotationComponent from "./Annotation";
 import CanvasComponent from "../Canvas";
 import React from "react";
 import classes from "./Items.module.css";
@@ -19,13 +19,15 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul>
           {items?.map((item, i) => (
-            <li key={item.id} className={`vizWrapper ${canvasBg}`}>
-              <p>
-                <mark className="vizLabel">
+            <li key={item.id} className={""}>
+              <details open>
+                <summary>
                   {item.type} ({`${i + 1} of ${items.length}`})
-                </mark>
-              </p>
-              <CanvasComponent canvas={item as Canvas} />
+                </summary>
+                <div className="vizWrapperPadded">
+                  <CanvasComponent canvas={item as Canvas} />
+                </div>
+              </details>
             </li>
           ))}
         </ul>
@@ -33,13 +35,17 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
     case "AnnotationPage":
       let annotationPages = items as AnnotationPage[];
       return (
-        <ul className={`vizWrapper ${annotationPageBg}`}>
+        <ul className={``}>
           {annotationPages?.map((annotationPage) => (
             <li key={annotationPage.id}>
-              <p>
-                <mark className="vizLabel">{annotationPage.type}</mark>
-              </p>
-              {annotationPage.items && <Items items={annotationPage.items} />}
+              <details open>
+                <summary>{annotationPage.type}</summary>
+                <div className="vizWrapperPadded">
+                  {annotationPage.items && (
+                    <Items items={annotationPage.items} />
+                  )}
+                </div>
+              </details>
             </li>
           ))}
         </ul>
@@ -49,12 +55,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
       return (
         <ul className={`grid`}>
           {annotations?.map((annotation) => (
-            <li key={annotation.id} className={`vizWrapper ${annotationBg}`}>
-              <p>
-                <mark className="vizLabel">
-                  {annotation.type} <i>motivation="{annotation.motivation}"</i>
-                </mark>
-              </p>
+            <li key={annotation.id} className={``}>
               <AnnotationComponent annotation={annotation} />
             </li>
           ))}

@@ -1,7 +1,7 @@
 .annotationMetadata {
 }
 .annotationMetadata > li {
-  text-align: right;
+  /* text-align: right; */
 }
 
 .annotationBg {
