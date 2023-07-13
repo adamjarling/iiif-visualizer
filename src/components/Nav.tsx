@@ -1,4 +1,5 @@
 import React from "react";
+import iiifLogo from "../assets/iiif-logo.png";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
@@ -7,7 +8,7 @@ const Nav = () => {
       <ul>
         <li>
           <strong className={styles["brand-wrapper"]}>
-            <img src="/iiif-logo.png" alt="IIIF Logo" /> IIIF Visualizer
+            <img src={iiifLogo} alt="IIIF Logo" /> IIIF Visualizer
           </strong>
         </li>
       </ul>
