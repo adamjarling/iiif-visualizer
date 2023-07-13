@@ -20,7 +20,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
         <ul>
           {items?.map((item, i) => (
             <li key={item.id}>
-              <details open>
+              <details>
                 <summary>
                   <span data-tooltip={item.id} data-placement="right">
                     {item.type} ({`${i + 1} of ${items.length}`})
@@ -40,7 +40,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
         <ul className={``}>
           {annotationPages?.map((annotationPage) => (
             <li key={annotationPage.id}>
-              <details open>
+              <details>
                 <summary>
                   <span data-tooltip={annotationPage.id} data-placement="right">
                     {annotationPage.type}
@@ -73,7 +73,7 @@ const Items: React.FC<ItemsProps> = ({ items }) => {
         <ul>
           {items?.map((item, i) => (
             <li key={item.id}>
-              <details open>
+              <details>
                 <summary>
                   {item.type} ({`${i + 1} of ${items.length}`}){" "}
                   <small>{item.id}</small>

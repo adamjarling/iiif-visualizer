@@ -12,7 +12,7 @@ const IIIFStructureSummary: React.FC<IIIFStructureSummaryProps> = ({
   if (!resource?.summary) return null;
 
   return (
-    <details open>
+    <details>
       <summary>Summary</summary>
       <div className={`vizWrapperPadded`}>
         {/* <p>

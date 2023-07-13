@@ -1,4 +1,5 @@
-import { Manifest } from "@iiif/presentation-3";
+import { IIIFExternalWebResource, Manifest } from "@iiif/presentation-3";
+
 import React from "react";
 import { Thumbnail } from "@samvera/nectar-iiif";
 
@@ -12,10 +13,12 @@ const IIIFStructureThumbnail: React.FC<IIIFStructureThumbnailProps> = ({
   if (!resource?.thumbnail) return null;
 
   return (
-    <details open>
+    <details>
       <summary>Thumbnail</summary>
       <div className={``}>
-        <Thumbnail thumbnail={resource.thumbnail} />
+        <Thumbnail
+          thumbnail={resource.thumbnail as IIIFExternalWebResource[]}
+        />
       </div>
     </details>
   );

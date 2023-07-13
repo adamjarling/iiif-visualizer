@@ -11,12 +11,12 @@ interface StructuresProps {
 const Structures: React.FC<StructuresProps> = ({ structures }) => {
   return (
     <>
-      <details open>
+      <details>
         <summary>Structures</summary>
         <ul className="vizWrapperPadded">
           {structures?.map((structure) => (
             <li key={structure.id} className="">
-              <details open>
+              <details>
                 <summary>
                   {structure.type} [<small>{structure.id}]</small>
                 </summary>

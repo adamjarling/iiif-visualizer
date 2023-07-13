@@ -1,4 +1,5 @@
 import { Manifest } from "@iiif/presentation-3";
+import { NectarExternalWebResource } from "@samvera/nectar-iiif/dist/types/nectar";
 import React from "react";
 import { SeeAlso } from "@samvera/nectar-iiif";
 
@@ -12,10 +13,10 @@ const IIIFStructureSeeAlso: React.FC<IIIFStructureSeeAlsoProps> = ({
   if (!resource?.seeAlso) return null;
 
   return (
-    <details open>
+    <details>
       <summary>SeeAlso</summary>
       <div className={``}>
-        <SeeAlso seeAlso={resource.seeAlso} />
+        <SeeAlso seeAlso={resource.seeAlso as NectarExternalWebResource[]} />
       </div>
     </details>
   );

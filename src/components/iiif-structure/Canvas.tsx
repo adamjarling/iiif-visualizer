@@ -1,6 +1,12 @@
+import {
+  Canvas as CanvasType,
+  ContentResource,
+  EmbeddedResource,
+  IIIFExternalWebResource,
+  InternationalString,
+} from "@iiif/presentation-3";
 import { Label, Thumbnail } from "@samvera/nectar-iiif";
 
-import { Canvas as CanvasType } from "@iiif/presentation-3";
 import Items from "./structural/Items";
 import React from "react";
 
@@ -9,20 +15,24 @@ interface CanvasProps {
 }
 
 const Canvas: React.FC<CanvasProps> = ({ canvas }) => {
+  if (!canvas) return null;
+
   return (
     <>
-      <Label label={canvas.label} as="h3" />
+      <Label label={canvas.label as InternationalString} as="h3" />
       {/* TODO: */}
       {canvas.thumbnail && (
-        <details open>
+        <details>
           <summary>Thumbnail</summary>
-          <Thumbnail thumbnail={canvas.thumbnail} />
+          <Thumbnail
+            thumbnail={canvas.thumbnail as IIIFExternalWebResource[]}
+          />
         </details>
       )}
 
       {canvas.items && (
         <>
-          <details open>
+          <details>
             <summary>Items</summary>
             <div className="vizWrapperPadded">
               <Items items={canvas.items} />
@@ -32,12 +42,12 @@ const Canvas: React.FC<CanvasProps> = ({ canvas }) => {
       )}
 
       {canvas.placeholderCanvas && (
-        <details open>
+        <details>
           <summary>Placeholder Canvas</summary>
           <>
             {canvas.placeholderCanvas.items ? (
               <div className="vizWrapperPadded">
-                <details open>
+                <details>
                   <summary>Items</summary>
                   <div className="vizWrapperPadded">
                     <Items items={canvas.placeholderCanvas.items} />
