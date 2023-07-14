@@ -22,7 +22,7 @@ const Canvas: React.FC<CanvasProps> = ({ canvas }) => {
       <Label label={canvas.label as InternationalString} as="h3" />
       {/* TODO: */}
       {canvas.thumbnail && (
-        <details>
+        <details open>
           <summary>Thumbnail</summary>
           <Thumbnail
             thumbnail={canvas.thumbnail as IIIFExternalWebResource[]}
@@ -32,7 +32,7 @@ const Canvas: React.FC<CanvasProps> = ({ canvas }) => {
 
       {canvas.items && (
         <>
-          <details>
+          <details open>
             <summary>Items</summary>
             <div className="vizWrapperPadded">
               <Items items={canvas.items} />
@@ -42,12 +42,12 @@ const Canvas: React.FC<CanvasProps> = ({ canvas }) => {
       )}
 
       {canvas.placeholderCanvas && (
-        <details>
+        <details open>
           <summary>Placeholder Canvas</summary>
           <>
             {canvas.placeholderCanvas.items ? (
               <div className="vizWrapperPadded">
-                <details>
+                <details open>
                   <summary>Items</summary>
                   <div className="vizWrapperPadded">
                     <Items items={canvas.placeholderCanvas.items} />

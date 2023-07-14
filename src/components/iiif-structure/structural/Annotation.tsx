@@ -19,7 +19,7 @@ const Annotation: React.FC<AnnotationProps> = ({ annotation }) => {
   if (type === "Image") {
     const serviceType = service?.[0]?.type || service?.[0]?.["@type"];
     return (
-      <details>
+      <details open>
         <summary>
           <span data-tooltip={id} data-placement="right">
             Annotation

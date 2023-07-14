@@ -13,7 +13,7 @@ const IIIFStructureHomepage: React.FC<IIIFStructureHomepageProps> = ({
   if (!resource?.homepage) return null;
 
   return (
-    <details>
+    <details open>
       <summary>Homepage</summary>
       <div className={``}>
         <Homepage homepage={resource.homepage as NectarExternalWebResource[]} />

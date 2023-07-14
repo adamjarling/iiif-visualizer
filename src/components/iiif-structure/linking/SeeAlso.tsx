@@ -13,7 +13,7 @@ const IIIFStructureSeeAlso: React.FC<IIIFStructureSeeAlsoProps> = ({
   if (!resource?.seeAlso) return null;
 
   return (
-    <details>
+    <details open>
       <summary>SeeAlso</summary>
       <div className={``}>
         <SeeAlso seeAlso={resource.seeAlso as NectarExternalWebResource[]} />

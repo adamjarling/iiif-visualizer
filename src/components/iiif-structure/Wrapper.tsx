@@ -34,7 +34,7 @@ const IIIFStructureWrapper: React.FC<Props> = ({ resource }) => {
           </section>
 
           <section className={classes.structural}>
-            <details>
+            <details open>
               <summary>Items</summary>
               <div className="vizWrapperPadded">
                 <Items items={resource.items} />

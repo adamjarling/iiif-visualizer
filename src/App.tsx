@@ -9,6 +9,7 @@ import { useState } from "react";
 
 function App() {
   const [resource, setResource] = useState<any>(null);
+  const [error, setError] = useState<Error | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,11 +20,13 @@ function App() {
     fetch(url)
       .then((response) => response)
       .then((data) => {
+        setError(null);
         setResource(data);
       })
       .catch((error) => {
         console.error(error);
         setResource(null);
+        setError(error as Error);
       });
   };
 
@@ -31,6 +34,8 @@ function App() {
     <div className="App">
       <Nav />
       <ResourceSelector handleSubmit={handleSubmit} />
+
+      {error && <p style={{ textAlign: "center" }}>Error: {error.message}</p>}
 
       {resource && (
         <>

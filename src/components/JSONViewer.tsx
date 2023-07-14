@@ -22,7 +22,7 @@ const JSONViewer: React.FC<JSONViewerProps> = ({ resource }) => {
 
   return (
     <>
-      <details ref={myRef} open>
+      <details open ref={myRef}>
         <summary onClick={handleClick}>{summaryText}</summary>
         <Highlight
           {...defaultProps}
